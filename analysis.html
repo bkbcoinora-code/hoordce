@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วิเคราะห์เชิงลึก - InvestWise</title>
+    <meta name="description"
+        content="เครื่องมือวิเคราะห์หุ้นเชิงลึก ทั้งเทคนิคอลและปัจจัยพื้นฐาน สำหรับนักลงทุนมืออาชีพ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for analysis page */
+        .page-hero {
+            padding: 150px 0 80px;
+            background: var(--gradient-soft);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-hero p {
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .analysis-section {
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .analysis-card {
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .analysis-card h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .analysis-card h3 span {
+            font-size: 1.5rem;
+        }
+
+        .analysis-card ul {
+            list-style: none;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .analysis-card li {
+            padding: var(--spacing-xs) 0;
+            color: var(--color-text-light);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .analysis-card li::before {
+            content: "✓";
+            color: var(--color-brown);
+            font-weight: bold;
+        }
+
+        .tools-section {
+            background: var(--color-cream);
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .tool-item {
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition-normal);
+        }
+
+        .tool-item:hover {
+            transform: scale(1.05);
+        }
+
+        .tool-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .tool-item h4 {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .tool-item p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        .chart-demo {
+            background: var(--color-warm-beige);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .chart-placeholder {
+            background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-white) 100%);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-2xl);
+            margin-top: var(--spacing-lg);
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            height: 150px;
+        }
+
+        .chart-bar {
+            width: 30px;
+            background: var(--gradient-warm);
+            border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+            animation: growBar 1s ease-out forwards;
+        }
+
+        @keyframes growBar {
+            from {
+                height: 0;
+            }
+        }
+
+        .chart-bar:nth-child(1) {
+            height: 60%;
+            animation-delay: 0.1s;
+        }
+
+        .chart-bar:nth-child(2) {
+            height: 80%;
+            animation-delay: 0.2s;
+        }
+
+        .chart-bar:nth-child(3) {
+            height: 45%;
+            animation-delay: 0.3s;
+        }
+
+        .chart-bar:nth-child(4) {
+            height: 90%;
+            animation-delay: 0.4s;
+        }
+
+        .chart-bar:nth-child(5) {
+            height: 70%;
+            animation-delay: 0.5s;
+        }
+
+        .chart-bar:nth-child(6) {
+            height: 85%;
+            animation-delay: 0.6s;
+        }
+
+        .chart-bar:nth-child(7) {
+            height: 55%;
+            animation-delay: 0.7s;
+        }
+
+        .chart-bar:nth-child(8) {
+            height: 95%;
+            animation-delay: 0.8s;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--color-brown);
+            font-weight: 500;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .back-link:hover {
+            color: var(--color-dark-brown);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📈</span>
+                InvestWise
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#markets">ตลาด</a></li>
+                <li><a href="index.html#features">บริการ</a></li>
+                <li><a href="index.html#insights">บทวิเคราะห์</a></li>
+                <li><a href="https://line.me/ti/p/~marketwatch_" target="_blank" class="btn-nav">เริ่มต้นลงทุน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← กลับหน้าหลัก</a>
+            <h1>📊 วิเคราะห์เชิงลึก</h1>
+            <p>เครื่องมือวิเคราะห์หุ้นระดับมืออาชีพ ทั้งการวิเคราะห์ทางเทคนิคและปัจจัยพื้นฐาน
+                เพื่อการตัดสินใจลงทุนที่แม่นยำ</p>
+        </div>
+    </section>
+
+    <!-- Analysis Types -->
+    <section class="analysis-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">เครื่องมือวิเคราะห์</span>
+                <h2 class="section-title">วิเคราะห์ได้ครบทุกมิติ</h2>
+            </div>
+            <div class="analysis-grid">
+                <div class="analysis-card">
+                    <h3><span>📈</span> Technical Analysis</h3>
+                    <p>วิเคราะห์ทางเทคนิคด้วยเครื่องมือที่ครบครัน</p>
+                    <ul>
+                        <li>กราฟ Candlestick แบบ Real-time</li>
+                        <li>Moving Averages (SMA, EMA)</li>
+                        <li>RSI, MACD, Bollinger Bands</li>
+                        <li>Volume Analysis</li>
+                        <li>Support & Resistance Lines</li>
+                        <li>Fibonacci Retracement</li>
+                    </ul>
+                </div>
+
+                <div class="analysis-card">
+                    <h3><span>📋</span> Fundamental Analysis</h3>
+                    <p>วิเคราะห์ปัจจัยพื้นฐานอย่างละเอียด</p>
+                    <ul>
+                        <li>งบการเงินย้อนหลัง 5 ปี</li>
+                        <li>อัตราส่วนทางการเงิน (P/E, P/BV, ROE)</li>
+                        <li>การวิเคราะห์กระแสเงินสด</li>
+                        <li>การเปรียบเทียบกับคู่แข่ง</li>
+                        <li>ประวัติการจ่ายเงินปันผล</li>
+                        <li>โครงสร้างผู้ถือหุ้น</li>
+                    </ul>
+                </div>
+
+                <div class="analysis-card">
+                    <h3><span>🔮</span> AI & Sentiment</h3>
+                    <p>การวิเคราะห์ด้วย AI และ Sentiment</p>
+                    <ul>
+                        <li>AI Stock Screener</li>
+                        <li>News Sentiment Analysis</li>
+                        <li>Social Media Trends</li>
+                        <li>Insider Trading Alerts</li>
+                        <li>Price Target Predictions</li>
+                        <li>Risk Assessment Score</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">เครื่องมือพร้อมใช้</span>
+                <h2 class="section-title">Indicators ยอดนิยม</h2>
+            </div>
+            <div class="tool-grid">
+                <div class="tool-item">
+                    <div class="icon">📊</div>
+                    <h4>MACD</h4>
+                    <p>Moving Average Convergence Divergence</p>
+                </div>
+                <div class="tool-item">
+                    <div class="icon">📉</div>
+                    <h4>RSI</h4>
+                    <p>Relative Strength Index</p>
+                </div>
+                <div class="tool-item">
+                    <div class="icon">📈</div>
+                    <h4>SMA/EMA</h4>
+                    <p>Moving Averages</p>
+                </div>
+                <div class="tool-item">
+                    <div class="icon">🎯</div>
+                    <h4>Bollinger</h4>
+                    <p>Bollinger Bands</p>
+                </div>
+                <div class="tool-item">
+                    <div class="icon">🔄</div>
+                    <h4>Stochastic</h4>
+                    <p>Stochastic Oscillator</p>
+                </div>
+                <div class="tool-item">
+                    <div class="icon">📐</div>
+                    <h4>Fibonacci</h4>
+                    <p>Fibonacci Levels</p>
+                </div>
+            </div>
+
+            <!-- Chart Demo -->
+            <div class="chart-demo">
+                <h3>ตัวอย่างการวิเคราะห์กราฟ</h3>
+                <p>กราฟแสดงผลแบบ Real-time พร้อม Indicators ที่เลือกได้</p>
+                <div class="chart-placeholder">
+                    <div class="chart-bars">
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                        <div class="chart-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="cta-wave">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#FDFDF8"
+                    d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>เริ่มวิเคราะห์หุ้นวันนี้</h2>
+                <p>สมัครใช้งานเครื่องมือวิเคราะห์ฟรี!</p>
+                <div class="cta-buttons">
+                    <a href="https://line.me/ti/p/gwBffEwy2e" target="_blank"
+                        class="btn btn-primary btn-large">สมัครเลย</a>
+                </div>
+                <p class="cta-note">✓ ทดลองใช้ฟรี ✓ ไม่มีค่าธรรมเนียม ✓ ยกเลิกได้ทุกเมื่อ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p>&copy; 2024 InvestWise. All rights reserved.</p>
+                <a href="index.html" style="color: rgba(255,255,255,0.7);">กลับหน้าหลัก</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

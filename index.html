@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestWise - ลงทุนหุ้นไทย หุ้นอเมริกา ทองคำ & S&P 500</title>
+    <meta name="description"
+        content="เริ่มต้นลงทุนอย่างชาญฉลาดกับ InvestWise - ข้อมูลหุ้นไทย หุ้นต่างประเทศ ทองคำ และ S&P 500">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">📈</span>
+                InvestWise
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#markets">ตลาด</a></li>
+                <li><a href="#features">บริการ</a></li>
+                <li><a href="#insights">บทวิเคราะห์</a></li>
+                <li><a href="https://line.me/ti/p/~marketwatch_" target="_blank" class="btn-nav">เริ่มต้นลงทุน</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-wave-top">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#F0F5E8" fill-opacity="0.5"
+                    d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">
+                ลงทุนอย่างชาญฉลาด<br>
+                <span class="gradient-text">เติบโตอย่างยั่งยืน</span>
+            </h1>
+            <p class="hero-subtitle fade-in">
+                เข้าถึงตลาดหุ้นทั่วโลก ทั้งหุ้นไทย หุ้นอเมริกา ทองคำ และ S&P 500<br>
+                ด้วยข้อมูลเชิงลึกและเครื่องมือวิเคราะห์ระดับมืออาชีพ
+            </p>
+            <div class="hero-buttons fade-in">
+                <a href="#markets" class="btn btn-primary">สำรวจตลาด</a>
+                <a href="#insights" class="btn btn-secondary">ดูบทวิเคราะห์</a>
+            </div>
+            <div class="hero-stats fade-in">
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">นักลงทุน</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">฿2.5B</span>
+                    <span class="stat-label">มูลค่าการลงทุน</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4.9★</span>
+                    <span class="stat-label">คะแนนรีวิว</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave-bottom">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#FDFDF8"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,165.3C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Markets Section -->
+    <section class="markets" id="markets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ตลาดที่เราให้บริการ</span>
+                <h2 class="section-title">เข้าถึงตลาดการลงทุนทั่วโลก</h2>
+                <p class="section-subtitle">เลือกลงทุนในตลาดที่คุณสนใจ ด้วยข้อมูลและเครื่องมือที่ครบครัน</p>
+            </div>
+            <div class="markets-grid">
+                <!-- US Stocks Card -->
+                <div class="market-card">
+                    <div class="card-icon us-icon">
+                        <span>🇺🇸</span>
+                    </div>
+                    <h3>หุ้นอเมริกา</h3>
+                    <p>เข้าถึงหุ้นชั้นนำของโลก Apple, Microsoft, Tesla และอีกมากมาย</p>
+                    <div class="card-stats">
+                        <div class="mini-stat">
+                            <span class="mini-value">+2.4%</span>
+                            <span class="mini-label">วันนี้</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-value">5,000+</span>
+                            <span class="mini-label">หุ้น</span>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link">ดูรายละเอียด →</a>
+                </div>
+
+                <!-- Thai Stocks Card -->
+                <div class="market-card">
+                    <div class="card-icon thai-icon">
+                        <span>🇹🇭</span>
+                    </div>
+                    <h3>หุ้นไทย</h3>
+                    <p>ลงทุนในหุ้นไทย SET50, SET100 และหุ้นรายตัวในตลาดหลักทรัพย์ไทย</p>
+                    <div class="card-stats">
+                        <div class="mini-stat">
+                            <span class="mini-value">+0.8%</span>
+                            <span class="mini-label">วันนี้</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-value">600+</span>
+                            <span class="mini-label">หุ้น</span>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link">ดูรายละเอียด →</a>
+                </div>
+
+                <!-- Gold Card -->
+                <div class="market-card">
+                    <div class="card-icon gold-icon">
+                        <span>🪙</span>
+                    </div>
+                    <h3>ทองคำ</h3>
+                    <p>ลงทุนในทองคำแท่ง ทองคำแท่ง 96.5% และ Gold ETF</p>
+                    <div class="card-stats">
+                        <div class="mini-stat">
+                            <span class="mini-value">+1.2%</span>
+                            <span class="mini-label">วันนี้</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-value">$2,050</span>
+                            <span class="mini-label">/oz</span>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link">ดูรายละเอียด →</a>
+                </div>
+
+                <!-- S&P 500 Card -->
+                <div class="market-card featured">
+                    <div class="featured-badge">ยอดนิยม</div>
+                    <div class="card-icon sp-icon">
+                        <span>📊</span>
+                    </div>
+                    <h3>S&P 500</h3>
+                    <p>ลงทุนในดัชนี S&P 500 - ดัชนีหุ้น 500 บริษัทชั้นนำของอเมริกา</p>
+                    <div class="card-stats">
+                        <div class="mini-stat">
+                            <span class="mini-value">+18.5%</span>
+                            <span class="mini-label">ปีนี้</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-value">500</span>
+                            <span class="mini-label">บริษัท</span>
+                        </div>
+                    </div>
+                    <a href="#" class="card-link">ดูรายละเอียด →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-wave">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#FFFFFF"
+                    d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">ทำไมต้องเลือกเรา</span>
+                <h2 class="section-title">เครื่องมือที่ออกแบบมาเพื่อนักลงทุน</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <a href="https://hoordce-th.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">📱</div>
+                        <h4>เข้าถึงง่าย</h4>
+                        <p>ซื้อขายได้ทุกที่ทุกเวลา ผ่านแอปบนมือถือหรือเว็บไซต์</p>
+                    </a>
+                </div>
+                <div class="feature-item">
+                    <a href="analysis.html" style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">📈</div>
+                        <h4>วิเคราะห์เชิงลึก</h4>
+                        <p>เครื่องมือวิเคราะห์ทางเทคนิคและพื้นฐานระดับมืออาชีพ</p>
+                    </a>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h4>ค่าธรรมเนียมต่ำ</h4>
+                    <p>ค่าคอมมิชชั่นเริ่มต้นเพียง 0.05% สำหรับหุ้นต่างประเทศ</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <h4>ปลอดภัยสูงสุด</h4>
+                    <p>ระบบรักษาความปลอดภัยมาตรฐานสากล SSL & 2FA</p>
+                </div>
+                <div class="feature-item">
+                    <a href="https://line.me/ti/p/gwBffEwy2e" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">🎓</div>
+                        <h4>เรียนรู้ฟรี</h4>
+                        <p>คอร์สเรียนและบทความให้ความรู้การลงทุนฟรี</p>
+                    </a>
+                </div>
+                <div class="feature-item">
+                    <a href="https://line.me/ti/p/~marketwatch_" target="_blank"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="feature-icon">🤝</div>
+                        <h4>ทีมผู้เชี่ยวชาญ</h4>
+                        <p>ทีมที่ปรึกษาพร้อมให้คำแนะนำตลอด 24 ชั่วโมง</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights" id="insights">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">บทวิเคราะห์ล่าสุด</span>
+                <h2 class="section-title">อัพเดทข่าวสารและการวิเคราะห์</h2>
+            </div>
+            <div class="insights-grid">
+                <article class="insight-card large">
+                    <div class="insight-image" style="background: url('sp500.png') center/cover no-repeat;">
+                        <span class="insight-category">S&P 500</span>
+                    </div>
+                    <div class="insight-content">
+                        <h3>S&P 500 ทำจุดสูงสุดใหม่ในปี 2026</h3>
+                        <p>ดัชนี S&P 500 ปรับตัวขึ้นต่อเนื่องจากความคาดหวังการลดดอกเบี้ยของ Fed...</p>
+                        <div class="insight-meta">
+                            <span>10 ม.ค. 2026</span>
+                            <span>•</span>
+                            <span>อ่าน 5 นาที</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="insight-card">
+                    <div class="insight-image" style="background: linear-gradient(135deg, #F0F5E8 0%, #A8C686 100%);">
+                        <span class="insight-category">Gold</span>
+                    </div>
+                    <div class="insight-content">
+                        <h3>ทองคำจ่อทดสอบ $2,100</h3>
+                        <p>แนวโน้มทองคำปี 2024 ยังคงเป็นขาขึ้น...</p>
+                        <div class="insight-meta">
+                            <span>9 ม.ค. 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="insight-card">
+                    <div class="insight-image" style="background: linear-gradient(135deg, #6B8E4E 0%, #3D5A2B 100%);">
+                        <span class="insight-category">SET</span>
+                    </div>
+                    <div class="insight-content">
+                        <h3>หุ้นไทย SET50 โอกาสในปี 2024</h3>
+                        <p>หุ้นไทยมีแนวโน้มฟื้นตัวจากแรงหนุน...</p>
+                        <div class="insight-meta">
+                            <span>8 ม.ค. 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="cta-wave">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#FDFDF8"
+                    d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,138.7C672,128,768,160,864,181.3C960,203,1056,213,1152,197.3C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>เริ่มต้นการลงทุนวันนี้</h2>
+                <p>สมัครฟรี! ไม่มีขั้นต่ำในการเปิดบัญชี</p>
+                <div class="cta-buttons">
+                    <a href="https://line.me/ti/p/gwBffEwy2e" target="_blank"
+                        class="btn btn-primary btn-large">สมัครเลย</a>
+                </div>
+                <p class="cta-note">✓ สมัครฟรี ✓ ไม่มีค่าธรรมเนียมรายเดือน ✓ ยกเลิกได้ทุกเมื่อ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">📈</span>
+                        InvestWise
+                    </a>
+                    <p>แพลตฟอร์มการลงทุนที่ออกแบบมาเพื่อนักลงทุนไทย เข้าถึงตลาดหุ้นทั่วโลกได้ง่ายๆ</p>
+                </div>
+                <div class="footer-links">
+                    <h5>ตลาด</h5>
+                    <ul>
+                        <li><a href="#">หุ้นอเมริกา</a></li>
+                        <li><a href="#">หุ้นไทย</a></li>
+                        <li><a href="#">ทองคำ</a></li>
+                        <li><a href="#">S&P 500</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>บริษัท</h5>
+                    <ul>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="https://lin.ee/TLyEFbY" target="_blank">ติดต่อเรา</a></li>
+                        <li><a href="#">ร่วมงานกับเรา</a></li>
+                        <li><a href="#">ข่าวสาร</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h5>ช่วยเหลือ</h5>
+                    <ul>
+                        <li><a href="https://lin.ee/TLyEFbY" target="_blank">ศูนย์ช่วยเหลือ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                        <li><a href="#">ข้อกำหนดการใช้งาน</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 InvestWise. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Line">💬</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
